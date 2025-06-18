@@ -18,25 +18,20 @@ function isActiveForm($formName, $activeForm) {
 }
 ?>
 
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      Full-Stack Login & Register Form With User & Admin Page
+       Form With User & Admin Page
     </title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="form-box <?php isActiveForm('login', $activeForm); ?>" id="login-form">
+      <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
         <form action="login_register.php" method="post">
           <h2>Login</h2>
           <?php showError($errors['login']); ?>
@@ -54,7 +49,7 @@ function isActiveForm($formName, $activeForm) {
           </p>
         </form>
       </div>
-      <div class="form-box <?php isActiveForm('register', $activeForm); ?>" id="register-form">
+      <div class="form-box <?= isActiveForm('register', $activeForm); ?>" id="register-form">
         <form action="login_register.php" method="post">
           <h2>Register</h2>
           <?php showError($errors['register']); ?>
