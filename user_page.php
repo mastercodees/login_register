@@ -1,10 +1,25 @@
-<html>
-  <head>
-    <title>User Page</title>
-  </head>
-  <body>
-    <h1>Welcome, <?php echo $_SESSION['name']; ?></h1>
-    <p>Your email: <?php echo $_SESSION['email']; ?></p>
-    <p>Your role: <?php echo $_SESSION['role']; ?></p>
-  </body>
+<?php
+session_start();
+if (!isset($_SESSION['email'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #f0f0f0;">
+    <div class="box">
+        <h1>Welcome to the User Page <span><?php echo $_SESSION['name']; ?></span></h1>
+        <p>This page is accessible only to users with <span>User</span> privileges.</p>
+        
+        <button onclick="window.location.href='logout.php'" >Logout</button>
+    </div>
+</body>
 </html>

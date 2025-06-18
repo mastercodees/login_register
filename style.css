@@ -85,3 +85,24 @@ p a:hover {
   text-align: center;
   margin-bottom: 20px;
 }
+h1 {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+span {
+  color: #4a90e2;
+  font-weight: 500;
+}
+.box p {
+  font-size: 16px;
+  color: #666;
+  margin: 40px;
+}
+
+.box {
+  display: block;
+  width: 300px;
+  text-align: center;
+  margin-top: 0 auto;
+}
