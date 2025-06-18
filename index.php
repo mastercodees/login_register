@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $errors = [
   'login' => $_SESSION['login_error'] ?? '',
   'register' => $_SESSION['register_error'] ?? '',
@@ -34,7 +33,7 @@ function isActiveForm($formName, $activeForm) {
       <div class="form-box <?= isActiveForm('login', $activeForm); ?>" id="login-form">
         <form action="login_register.php" method="post">
           <h2>Login</h2>
-          <?php showError($errors['login']); ?>
+          <?php echo showError($errors['login']); ?>
           <input type="email" name="email" placeholder="Email" required />
           <input
             type="password"
