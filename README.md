@@ -16,8 +16,8 @@ A simple PHP & MySQL-based user authentication system with registration, login, 
 - PHP (Core PHP)
 - MySQL
 - HTML5, CSS3
-- Bootstrap (optional)
-- Apache/Nginx (recommended with XAMPP, WAMP, or LAMP)
+- Javascript
+
 
 ## Installation
 
